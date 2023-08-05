@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="7.0.1" />
+    <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\San.SimpleChat.Business\San.SimpleChat.Business.csproj" />
+    <ProjectReference Include="..\San.SimpleChat.DataRepositories\San.SimpleChat.DataRepositories.csproj" />
+  </ItemGroup>
+
+</Project>
