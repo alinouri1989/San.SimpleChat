@@ -41,7 +41,7 @@ namespace San.SimpleChat
 
             );
 
-            services.AddIdentity<ApplicationUser,IdentityRole>().AddEntityFrameworkStores<SimpleChatDbContext>(); ;
+            services.AddIdentity<ApplicationUser, IdentityRole>().AddEntityFrameworkStores<SimpleChatDbContext>(); ;
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -94,7 +94,7 @@ namespace San.SimpleChat
             // for you.
             builder.RegisterModule(new RepositoryAutofacModule1());
             builder.RegisterModule(new BusinessAutofacModule1());
-           
+
         }
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -103,23 +103,22 @@ namespace San.SimpleChat
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-               
+
             }
 
 
             app.UseHttpsRedirection();
 
-          
+
 
 
             app.UseRouting();
 
             app.UseCors(builder =>
-             builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString(), "http://localhost:4500")
+             builder.WithOrigins(Configuration["ApplicationSettings:Client_URL"].ToString(), "http://localhost:4200")
              .AllowAnyHeader()
              .AllowAnyMethod()
              .AllowCredentials()
-
              );
 
             // can use the convenience extension method GetAutofacRoot.
@@ -128,7 +127,7 @@ namespace San.SimpleChat
             app.UseAuthorization();
 
 
-           
+
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
