@@ -24,6 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core\San.SimpleChat.Core\San.SimpleChat.Core.csproj" />
     <ProjectReference Include="..\Infrastructure\San.SimpleChat.DataRepositories\San.SimpleChat.DataRepositories.csproj" />
     <ProjectReference Include="..\Infrastructure\San.SimpleChat.DependencyResolver\San.SimpleChat.DependencyResolver.csproj" />
   </ItemGroup>
